@@ -1,0 +1,19 @@
+mongoose => {
+    userSchema(firstName, LastName, Email, paasword, Location);
+    foodItemSchema(CategoryName, name, image, options, descriptions);
+    CartSchema(email, name, price, potion, qunatity, image,);
+}
+
+routes => {
+    cartRoute {
+        get => {
+            find the all cart added by the specific user through its email,
+            By the help of (let fullCart = await Cart.find({email}))
+        }
+
+        post => {
+            firstly we create the new cart (let newCart = new Cart(data));
+            Then save the new added cart into database 
+        }
+    }
+}
