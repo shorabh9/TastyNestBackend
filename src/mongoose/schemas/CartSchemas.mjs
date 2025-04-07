@@ -29,6 +29,6 @@ let CartSchema = mongoose.Schema({
     } 
 })
 
-let Cart = mongoose.model('Cart',CartSchema);
+let Cart = mongoose.model('maacho',CartSchema);
 
 export default Cart;
