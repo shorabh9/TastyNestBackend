@@ -9,12 +9,12 @@ let databaseName = 'FoodFinder'
 let mongoURI = `mongodb+srv://text-yt:xMBlzelCpUmUh6oJ@cluster0.oikgl.mongodb.net/${databaseName}`;
 
 let router = express();
+
 const mongoOptions = {
     retryWrites: true,
     w: "majority",
     tls: true,
     tlsInsecure: false,
-    // tlsAllowInvalidCertificates: true
 };
 
 let mongoConnect = () => {
@@ -30,8 +30,8 @@ let mongoConnect = () => {
 mongoConnect();
 
 router.use(express.json());
-
 router.use(cookieParser('CookieSecret'));
+
 router.use(
     session({
       secret: "FoodFinderCookieSecretComplex",
@@ -56,7 +56,6 @@ router.use(passport.initialize());
 router.use(passport.session());
 
 router.get('/', (req, res) => {
-    console.log(req.session);
     req.session.visited = true;
 
     res.status(200).send('Hello from the home route!');
