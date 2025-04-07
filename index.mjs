@@ -1,10 +1,10 @@
 import express from 'express';
-import userRouter from './routes/userRouter.mjs'
-import cartRouter from './routes/cartRoute.mjs'
-import sessionDatabaseHandler from './utils/sessionHandler.mjs'
-import loginRouter from './routes/login.mjs'
-import logoutRouter from './routes/logoutRouter.mjs'
-import fooditemRouter from './routes/foodItem.mjs'
+import userRouter from './src/routes/userRouter.mjs'
+import cartRouter from './src/routes/cartRoute.mjs'
+import sessionDatabaseHandler from './src/utils/sessionHandler.mjs'
+import loginRouter from './src/routes/login.mjs'
+import logoutRouter from './src/routes/logoutRouter.mjs'
+import fooditemRouter from './src/routes/foodItem.mjs'
 import cors from 'cors';
 import dotenv from "dotenv";
 dotenv.config();
