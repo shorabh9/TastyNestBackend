@@ -11,7 +11,7 @@ dotenv.config();
 
 const app = express();
 app.set('trust proxy', 1);
-const allowedOrigins = process.env.ALLOWED_ORIGINS ? process.env.ALLOWED_ORIGINS.split(',') : ['https://tasty-nest-frontend.vercel.app/'];
+const allowedOrigins = process.env.ALLOWED_ORIGINS ? process.env.ALLOWED_ORIGINS.split(',') : ['http://localhost:5173', 'https://tasty-nest-frontend.vercel.app'];
 
 app.use(cors({
     origin: function (origin, callback) {
